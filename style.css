@@ -862,10 +862,18 @@ nav {
     color: var(--pink);
 }
 
-.research-label {
-    margin-top: auto;
+/* Holds more than one link (e.g. GitHub + Paper) side by side */
 
-    padding-top: 20px;
+.project-links {
+    display: flex;
+
+    gap: 18px;
+}
+
+/* Sits between the tech tags and the GitHub link on the research card */
+
+.research-label {
+    padding-bottom: 6px;
 
     color: var(--cyan);
 
@@ -1127,6 +1135,16 @@ footer p {
     transition:
         opacity 0.7s ease,
         transform 0.7s ease;
+}
+
+/* Keeps the hover effects on project cards smooth after they fade in */
+
+.project-card.hidden {
+    transition:
+        opacity 0.7s ease,
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
 .show {
